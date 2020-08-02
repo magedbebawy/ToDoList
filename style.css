@@ -1,0 +1,98 @@
+:root{
+    --primary-color:  #405d27;
+    --light-color: #c1946a;
+    --dark-color: #3e4444;
+}
+body{
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--primary-color);
+}
+main{
+    width: 30%;
+    margin: 0 auto;
+    background-color: var(--light-color);
+}
+h1{
+    color: white;
+    background-color: var(--dark-color);
+    padding: 5px;
+}
+.todo{
+    position: relative;
+    cursor: pointer;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid gray;
+}
+
+.checkStyle{
+    color: var(--dark-color);
+    vertical-align: middle;
+    display: inline-block;
+    height: .5em; 
+    width: .5em;
+    border: 2px solid;
+    margin-right: .5em;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+p{
+    vertical-align: middle;
+    display: inline-block;
+}
+input{
+    border: 0;
+    border-bottom: 1px solid;
+    margin: 5px;
+    width: 80%;
+    background-color: var(--light-color);
+}
+button{
+    cursor: pointer;
+    border: 0;
+    background-color: var(--light-color);
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 5px;
+    color: rgb(30, 110, 65);
+}
+i{
+    float: right;
+    margin-top: 20px;
+    color: rgb(172, 49, 49);
+}
+.completed::after{
+    position: absolute;
+  left: 0;
+  top: 50%;
+  height: 2px;
+  background: var(--dark-color);
+  content: "";
+  width: 90%;
+  display: block;
+}
+
+
+@media only screen and (max-width: 800px){
+    main{
+        width: 43%;
+    }
+}
+@media only screen and (max-width: 600px){
+    main{
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 400px){
+    
+    body{
+        font-size: .80em;
+    }
+    main{
+        width: 90%;
+    }
+    input{
+        width: 75%;
+    }
+}
